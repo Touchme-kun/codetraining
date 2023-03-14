@@ -1,14 +1,15 @@
-#this
-
-```cadence
 using System;
 
 namespace BasicClasses
 {
   class Forest
   {
+    // FIELDS
+    
     public int age;
     private string biome;
+    
+    // CONSTRUCTORS
     
     public Forest(string name, string biome)
     {
@@ -16,6 +17,11 @@ namespace BasicClasses
       this.Biome = biome;
       Age = 0;
     }
+    
+    public Forest(string name) : this(name, "Unknown")
+    { }
+    
+    // PROPERTIES
     
     public string Name
     { get; set; }
@@ -46,7 +52,9 @@ namespace BasicClasses
       get { return age; }
       private set { age = value; }
     }
-     
+    
+    // METHODS
+    
     public int Grow()
     {
       Trees += 30;
@@ -59,9 +67,8 @@ namespace BasicClasses
       Trees -= 20;
       Age += 1;
       return Trees;
-      
     }
+    
   }
-}
 
-```
+}
